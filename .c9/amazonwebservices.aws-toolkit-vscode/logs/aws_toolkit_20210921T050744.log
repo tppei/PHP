@@ -1,0 +1,239 @@
+2021-09-21 05:07:44 [ERROR]: log level: info
+2021-09-21 05:07:44 [INFO]: Retrieving AWS endpoint data
+2021-09-21 05:07:44 [INFO]: OS:  Linux x64 4.14.238-125.422.amzn1.x86_64
+2021-09-21 05:07:44 [INFO]: AWS Cloud9 Extension Host Version:  1.42.0AWS Toolkit Version:  1.27.0-6c4644db65c7
+2021-09-21 05:09:26 [INFO]: autoconnect: connected: 'profile:default'
+2021-09-21 05:12:44 [INFO]: Successfully sent a telemetry batch of 5
+2021-09-21 05:14:14 [ERROR]: [AccessDenied: User: arn:aws:iam::368662227155:user/student_49497 is not authorized to perform: cloudformation:ListStacks on resource: arn:aws:cloudformation:us-east-1:368662227155:stack/*/*
+	at constructor.m (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:9005)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDenied',
+  time: 2021-09-21T05:14:14.851Z,
+  requestId: '18a61397-2dcc-4873-97f4-9a65418f8114',
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 47.29283720966211
+}
+2021-09-21 05:14:16 [ERROR]: [AccessDeniedException: User: arn:aws:iam::368662227155:user/student_49497 is not authorized to perform: logs:DescribeLogGroups on resource: arn:aws:logs:us-east-1:368662227155:log-group::log-stream:
+	at constructor.l (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:7865)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDeniedException',
+  time: 2021-09-21T05:14:16.555Z,
+  requestId: 'ff2176a3-9050-43f6-a0fb-104a34792296',
+  statusCode: 400,
+  retryable: false,
+  retryDelay: 2.022923307746982
+}
+2021-09-21 05:14:36 [ERROR]: [AccessDeniedException: User: arn:aws:iam::368662227155:user/student_49497 is not authorized to perform: ecr:DescribeRepositories on resource: arn:aws:ecr:us-east-1:368662227155:repository/*
+	at constructor.l (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:7865)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDeniedException',
+  time: 2021-09-21T05:14:36.625Z,
+  requestId: '44868c32-9176-47c4-ab45-0a192020d21c',
+  statusCode: 400,
+  retryable: false,
+  retryDelay: 53.23308652632526
+}
+2021-09-21 05:14:39 [ERROR]: [AccessDeniedException: User: arn:aws:iam::368662227155:user/student_49497 is not authorized to perform: lambda:ListFunctions on resource: *
+	at Object.l [as extractError] (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:7865)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:12804)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDeniedException',
+  time: 2021-09-21T05:14:39.347Z,
+  requestId: 'bc276071-497d-4bef-aab6-46cbfd8b7776',
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 86.78923040954338
+}
+2021-09-21 05:14:48 [ERROR]: [AccessDeniedException: User: arn:aws:iam::368662227155:user/student_49497 is not authorized to perform: apigateway:GET on resource: arn:aws:apigateway:us-east-1::/restapis
+	at Object.l [as extractError] (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:7865)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:44:12804)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDeniedException',
+  time: 2021-09-21T05:14:48.338Z,
+  requestId: '9326f08b-7612-4f7c-990b-30388546a35b',
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 39.961662150295865
+}
+2021-09-21 05:14:56 [ERROR]: Failed to list buckets: [AccessDenied: Access Denied
+	at constructor.extractError (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:47:10560)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDenied',
+  region: null,
+  time: 2021-09-21T05:14:56.073Z,
+  requestId: 'Z6FFB3HRFHG1AF0D',
+  extendedRequestId: '4mI5+MFmpURyyOAHGZDvIPnyMYFUXZdTHS6D6nggHSIAZhDxWwmAhET6VM1nhhILrChLWr3kTp0=',
+  cfId: undefined,
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 56.56001757161471
+}
+2021-09-21 05:14:56 [ERROR]: [AccessDenied: Access Denied
+	at constructor.extractError (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:47:10560)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22254)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at constructor.emit (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:21963)
+	at constructor.emitEvent (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7927)
+	at constructor.e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3513)
+	at B.runTo (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1736)
+	at /opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:57:1948
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:3724)
+	at constructor.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:7982)
+	at constructor.callListeners (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22358)
+	at e (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:45:22139)
+	at IncomingMessage.<anonymous> (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:40:6016189)
+	at IncomingMessage.emit (events.js:326:22)
+	at IncomingMessage.EventEmitter.emit (domain.js:483:12)
+	at endReadableNT (_stream_readable.js:1241:12)
+	at processTicksAndRejections (internal/process/task_queues.js:84:21)] {
+  code: 'AccessDenied',
+  region: null,
+  time: 2021-09-21T05:14:56.073Z,
+  requestId: 'Z6FFB3HRFHG1AF0D',
+  extendedRequestId: '4mI5+MFmpURyyOAHGZDvIPnyMYFUXZdTHS6D6nggHSIAZhDxWwmAhET6VM1nhhILrChLWr3kTp0=',
+  cfId: undefined,
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 56.56001757161471
+}
+2021-09-21 05:17:44 [INFO]: Successfully sent a telemetry batch of 5
