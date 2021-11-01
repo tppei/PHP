@@ -1,0 +1,6 @@
+19-6 課題
+値段が１００円の商品に関して商品ごとの売上数量を取得し、商品名と合わせて表示してください。
+SELECT goods_table.goods_name,SUM(order_detail_table.quantity) AS '売上数量' FROM goods_table LEFT JOIN order_detail_table ON goods_table.goods_id = order_detail_table.goods_id WHERE price = 100 GROUP BY goods_name
+
+
+SELECT customer_table.customer_name,SUM(order_detail_table.quantity * goods_table.price) FROM customer_table LEFT JOIN order_table ON customer_table.customer_id = order_table.customer_id LEFT JOIN order_detail_table on order_table.order_id = order_detail_table.order_id LEFT JOIN goods_table on order_detail_table.goods_id = goods_table.goods_id GROUP BY customer_table.customer_name

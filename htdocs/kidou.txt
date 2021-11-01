@@ -1,0 +1,11 @@
+//phpリンク集//
+php -S 0.0.0.0:8000 -t ~/environment/htdocs
+
+//myaql起動//
+php -S 0.0.0.0:$PORT -t ~/environment/phpmyadmin
+
+//mysqlログイン//
+DB_USER: codecamp49497
+DB_PASSWORD: codecamp49497
+DB_NAME: codecamp49497
+DB_HOST: localhost

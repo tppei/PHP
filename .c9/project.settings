@@ -1,9 +1,44 @@
 {
+    "aws": {
+        "@awsToolkit": false
+    },
     "build": {
         "@saveall": true
     },
     "extensions": {
-        "@aws.profile": "profile:default"
+        "@aws.cfnSchemaVersion": "v5.2.11",
+        "@aws.profile": "profile:default",
+        "@aws.samSchemaVersion": "v5.2.11",
+        "@git.confirmSync": false,
+        "@yaml.customTags": [
+            "!And",
+            "!And sequence",
+            "!If",
+            "!If sequence",
+            "!Not",
+            "!Not sequence",
+            "!Equals",
+            "!Equals sequence",
+            "!Or",
+            "!Or sequence",
+            "!FindInMap",
+            "!FindInMap sequence",
+            "!Base64",
+            "!Join",
+            "!Join sequence",
+            "!Cidr",
+            "!Ref",
+            "!Sub",
+            "!Sub sequence",
+            "!GetAtt",
+            "!GetAZs",
+            "!ImportValue",
+            "!ImportValue sequence",
+            "!Select",
+            "!Select sequence",
+            "!Split",
+            "!Split sequence"
+        ]
     },
     "instance": {
         "@automaticShutdown": "30"
