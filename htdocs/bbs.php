@@ -2,7 +2,7 @@
 $filename = "./bbs.txt";
 $comment = "";
 $name = "";
-$date = date('y/m/d H:i:s');
+$date = date('Y-m-d H:i:s');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
          
@@ -35,7 +35,7 @@ $date = date('y/m/d H:i:s');
     }
             
     if($comment && $name){
-        $hatugen = '名前:'.$name."\t".'コメント:'.$comment."\t".'日時:'.$date."\n";
+        $hatugen = $name.":"."\t".$comment."\t".'-'.$date."\n";
         $fp = fopen($filename,'a');
             if($fp){
                 if(!fwrite($fp,$hatugen)){
@@ -65,15 +65,15 @@ $data =[];
         <title>ひとこと掲示板サイト</title>
     </head>
     <body>
+        <h1>ひとこと掲示板</h1>
         <form method="post">
             <label for="name">名前：<input type="text" name="name"></label>
-            <label for="hitokoto">発言：<input type="text" name="hitokoto"></label>
-            <input type="submit" value="投稿">
+            <label for="hitokoto">ひとこと：<input type="text" name="hitokoto"></label>
+            <input type="submit" value="送信">
         </form>
-        <p>発言</p>
         <?php 
             foreach ($data as $go) {
-            print "<p>".$go."</p>" ; 
+            print "<p>"."・".$go."</p>" ; 
          }
          ?>
     </body>
