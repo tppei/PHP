@@ -53,6 +53,8 @@ $data =[];
             while(($tmp=fgets($fp))){
               $data[] = htmlspecialchars($tmp,ENT_QUOTES,"UTF-8");  
             }
+            // 配列の順番を逆にする
+            $data = array_reverse($data);
             fclose($fp);
         }
     }

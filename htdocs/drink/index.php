@@ -1,3 +1,20 @@
+<?php
+$host = 'localhost'; // データベースのホスト名
+$username = 'codecamp49497';  // MySQLのユーザ名
+$passwd   = 'codecamp49497';    // MySQLのパスワード
+$dbname   = 'codecamp49497';    // データベース名
+
+if($link =  mysqli_connect($host, $username, $passwd, $dbname)){
+     // 文字コードセット
+    mysqli_set_charset($link, 'UTF8');
+     // 表作成のためのカラム取得
+     $sql = "SELECT drink_details.ドリンクid,ドリンク名,商品画像,価格,在庫数,公開ステータス FROM drink_details JOIN drink_stock_table ON drink_details.ドリンクid = drink_stock_table.ドリンクid";
+     $result = mysqli_query($link,$sql);
+     while($row = mysqli_fetch_array($result)){
+         $data[] = $row;
+     }
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -9,10 +26,12 @@
             }
             
             #flex .drink{
-                border: solid 1px;
+                
                 width: 120px;
                 height: 210px;
                 text-align: center;
+                margin: 10px;
+                float: left;
             }
             
             #flex span{
@@ -43,6 +62,42 @@
                 金額
                 <input type="text" name="money">
             </div>
+            
+            <div id="flex">
+                <!--アイテムが何も選択されなかった場合のラジオボタン-->
+                <input type="radio" name="drink_id"value="" checked="checked" style="display:none;">
+                <?php
+                foreach($data as $go){
+                ?>
+                <?php
+                if($go['公開ステータス'] === '1'){
+                ?>
+                <div class="drink">
+                    <span class = 'img_size'>
+                    <!--商品画像-->
+                    <?php print '<img src= "./image/'.$go['商品画像'].'">'?>
+                    </span>
+                    <!--商品名-->
+                    <span><?php print htmlspecialchars($go['ドリンク名'],ENT_QUOTES,'UTF-8')?></span>
+                    <!--値段-->
+                    <span><?php print htmlspecialchars($go['価格'],ENT_QUOTES,'UTF-8')?></span>
+                    <?php
+                    if($go['在庫数'] !== '0'){
+                    ?>
+                    <!--在庫があればラジオボタン表示-->
+                        <input type ='radio' name='drink_id' value='<?php print htmlspecialchars($go['ドリンクid'],ENT_QUOTES,'UTF-8')?>'>
+                    <?php
+                    }else{ 
+                        // なければ売り切れを表示
+                        print "<span class='red'>売り切れ</span>";
+                    }
+                    ?>
+                </div>
+                <?php } ?>
+                <?php }?>
+            </div>
+            
+            
             <div id="submit">
                 <input type="submit" value="■□■□■購入■□■□■">
             </div>
