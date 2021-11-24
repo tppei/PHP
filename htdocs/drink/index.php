@@ -5,11 +5,15 @@ $passwd   = 'codecamp49497';    // MySQLのパスワード
 $dbname   = 'codecamp49497';    // データベース名
 
 if($link =  mysqli_connect($host, $username, $passwd, $dbname)){
+    
      // 文字コードセット
     mysqli_set_charset($link, 'UTF8');
-     // 表作成のためのカラム取得
+    
+     // 購入者画面に表示する表作成のためのカラム取得
      $sql = "SELECT drink_details.ドリンクid,ドリンク名,商品画像,価格,在庫数,公開ステータス FROM drink_details JOIN drink_stock_table ON drink_details.ドリンクid = drink_stock_table.ドリンクid";
      $result = mysqli_query($link,$sql);
+     
+    //  結果を一行ずつ取得
      while($row = mysqli_fetch_array($result)){
          $data[] = $row;
      }
@@ -66,6 +70,8 @@ if($link =  mysqli_connect($host, $username, $passwd, $dbname)){
             <div id="flex">
                 <!--アイテムが何も選択されなかった場合のラジオボタン-->
                 <input type="radio" name="drink_id"value="" checked="checked" style="display:none;">
+                
+                <!--結果を取り出す-->
                 <?php
                 foreach($data as $go){
                 ?>
