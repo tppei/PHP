@@ -17,7 +17,7 @@ $data = [];
 
 $regexp_stock = '/^[0-9]+$/';       // 在庫数正規表現
 $regexp_price = '/^[0-9]+$/';       // 値段正規表現
-$regexp_file = '/\.png$|\.jpeg$/i'; // 画像ファイル正規表現
+$regexp_file = '/\.png$|\.jpeg$/i/'; // 画像ファイル正規表現
 
 $host = 'localhost';          // データベースのホスト名
 $username = 'codecamp49497';  // MySQLのユーザ名
@@ -101,7 +101,7 @@ if($link = mysqli_connect($host, $username, $passwd, $dbname)){
         //   画像名を変数に代入
            $filename = basename($_FILES['new_img']['name']);
         //   確認用
-        //   var_dump($filename);
+           var_dump($filename);
            }else{
                $input_err[] = "ファイル形式が異なります。画像ファイルはJPEG又はPNGのみ利用可能です。";
            }

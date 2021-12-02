@@ -53,13 +53,14 @@ $err_msg = [];
         mysqli_autocommit($link, false);
         
         
+        
         if($link){
             
             // 文字コードセット
             mysqli_set_charset($link, 'UTF8');
             
             // 購入した商品情報取得のためのクエリ
-            $sql = "SELECT drink_details.ドリンクid,ドリンク名,商品画像,価格,在庫数 FROM drink_details JOIN drink_stock_table ON drink_details.ドリンクid = drink_stock_table.ドリンクid WHERE drink_details.ドリンクid = '$drink_id'";
+            $sql = "SELECT drink_details.ドリンクid,ドリンク名,商品画像,価格,在庫数,公開ステータス FROM drink_details JOIN drink_stock_table ON drink_details.ドリンクid = drink_stock_table.ドリンクid WHERE drink_details.ドリンクid = '$drink_id'";
             
             if($result = mysqli_query($link,$sql)){
                 // 確認用
@@ -71,48 +72,70 @@ $err_msg = [];
                     // 購入したドリンク名取得
                     $drink_name = htmlspecialchars($row['ドリンク名']);
                     
-                    // おつり計算
-                    $charge = $_POST['money'] - $row['価格'];
+                    // 購入したドリンクのステータス取得　修正箇所　12/2/'21
+                    $status = htmlspecialchars($row['公開ステータス']);
                     
-                    // 購入した商品画像取得
+                    // 購入したドリンクの在庫数取得　修正箇所　12/2/'21
+                    $stock = htmlspecialchars($row['在庫数']);
+                    
+                    // 購入した商品画像取得　修正箇所　12/2/'21
                     $image = $row['商品画像'];
                     
-                    // 購入した商品の現在在庫数取得
-                    $stock = $row['在庫数'];
+                     // 購入した商品価格取得　修正箇所　12/2/'21
+                    $price = $row['価格'];
                     
                 }
                 
-                // 現在の在庫数から一つひく
-                $stock = $stock - 1;
-                
-                // 投入金額 - 価格　< 0　の時
-                if($charge < 0){
-                    print 'お金が足りません';
+                // 公開ステータスが非公開の場合購入できない　修正箇所　12/2/'21
+                if($status === '0'){
+                        
+                    print '現在購入できません';
+                        
                 }else{
+                        
+                    // おつり計算
+                    $charge = $_POST['money'] - $price;
+                        
+                    if($stock <= 0){
+                        
+                        print '売り切れました！';
+                        
+                    }else{
+                
+                        // 現在の在庫数から一つひく
+                        $stock = $stock - 1;
+                        
+                        // 投入金額 - 価格　< 0　の時
+                        if($charge < 0){
+                            print 'お金が足りません';
+                        }else{
                     
-                    // 購入履歴表(drink_history_table)に購入日追加
-                    $tohistory_sql = "INSERT INTO drink_history_table (ドリンクID,購入日) VALUES($drink_id,'$date')";
-                        if(!$result = mysqli_query($link,$tohistory_sql)){
-                            $err_msg[] = '購入日追加失敗';
-                        }
+                        // 購入履歴表(drink_history_table)に購入日追加
+                        $tohistory_sql = "INSERT INTO drink_history_table (ドリンクID,購入日) VALUES($drink_id,'$date')";
+                            if(!$result = mysqli_query($link,$tohistory_sql)){
+                                $err_msg[] = '購入日追加失敗';
+                            }
                         
                         // 在庫管理表(drink_stock_table)の更新日を更新
-                    $tostock_date_sql = "UPDATE drink_stock_table SET 更新日 = '$date' WHERE ドリンクid = '$drink_id'";
-                        if(!$result = mysqli_query($link,$tostock_date_sql)){
-                            $err_msg[] = '在庫表更新日更新失敗';
-                        }
-                        
-                        // 在庫管理表(drink_stock_table)の在庫から一つ引いた数で更新
-                    $tostock_stock_sql = "UPDATE drink_stock_table SET 在庫数 = $stock WHERE ドリンクid = '$drink_id'";
-                        if(!$result = mysqli_query($link,$tostock_stock_sql)){
-                            $err_msg[] = '在庫数更新失敗';
+                        $tostock_date_sql = "UPDATE drink_stock_table SET 更新日 = '$date' WHERE ドリンクid = '$drink_id'";
+                            if(!$result = mysqli_query($link,$tostock_date_sql)){
+                                $err_msg[] = '在庫表更新日更新失敗';
+                            }
                             
-                        }
+                        // 在庫管理表(drink_stock_table)の在庫から一つ引いた数で更新
+                        $tostock_stock_sql = "UPDATE drink_stock_table SET 在庫数 = $stock WHERE ドリンクid = '$drink_id'";
+                            if(!$result = mysqli_query($link,$tostock_stock_sql)){
+                                $err_msg[] = '在庫数更新失敗';
+                                
+                            }
                     
-                    // 結果の表示
-                    print '<img src="./image/'.$image.'">';
-                    print '<p>がしゃん!['.$drink_name.']が買えました！</p>';
-                    print '<p>おつりは['.$charge.'円]です</p>';
+                        // 結果の表示
+                        print '<img src="./image/'.$image.'">';
+                        print '<p>がしゃん!['.$drink_name.']が買えました！</p>';
+                        print '<p>おつりは['.$charge.'円]です</p>';
+                        
+                        }
+                    }
                 }
             }else{
                 $err_msg[] = "商品情報取得失敗";
