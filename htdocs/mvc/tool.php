@@ -1,9 +1,9 @@
 <?php
 
 // 設定ファイル読み込み
-require_once 'tool_const.php';
+require_once 'revender_const.php';
 // 関数ファイル読み込み
-require_once 'tool_model.php';
+require_once 'revender_model.php';
 
 // DB接続
 // MySQLへの接続
@@ -20,7 +20,7 @@ table_display($pdo);
 
 include_once 'tool_view.php';
                 
-         
+$pdo = null;         
     
                 
    

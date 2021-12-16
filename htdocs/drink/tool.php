@@ -17,7 +17,7 @@ $data = [];
 
 $regexp_stock = '/^[0-9]+$/';       // 在庫数正規表現
 $regexp_price = '/^[0-9]+$/';       // 値段正規表現
-$regexp_file = '/\.png$|\.jpeg$/i/'; // 画像ファイル正規表現
+$regexp_file = '/\.png$|\.jpg$/i'; // 画像ファイル正規表現
 
 $host = 'localhost';          // データベースのホスト名
 $username = 'codecamp49497';  // MySQLのユーザ名
@@ -123,6 +123,7 @@ if($link = mysqli_connect($host, $username, $passwd, $dbname)){
             if(mysqli_query($link,$query_details) !== TRUE){
                 $err_msg[] = 'SQL失敗:' . $query_details;
             };
+            
             
             //   在庫表に行追加
             $query_stock = "INSERT INTO drink_stock_table (在庫数,作成日,更新日) VALUES($new_stock,'$date','$date')";
