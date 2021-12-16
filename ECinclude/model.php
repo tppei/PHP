@@ -428,7 +428,7 @@ function delete_iteminfo($pdo){
 
 
 // ユーザー名　パスワード　入力チェック
-function userinfo_input_charcheck($pdo){
+function userinfo_input_charcheck(){
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         
         global $regexp_user;

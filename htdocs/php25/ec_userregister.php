@@ -1,10 +1,11 @@
 <?php
-$username ='';
+
 
 // 設定ファイル読み込み
 require_once '../../ECinclude/const.php';
 // 関数ファイル読み込み
 require_once '../../ECinclude/model.php';
+
 
 // セッション開始
 session_start();
@@ -31,9 +32,10 @@ if (isset($data[0]['user_name'])) {
    header('Location:ec_logout.php');
    exit;
 }
-$input_err = userinfo_input_charcheck($pdo);
 
-$register_err = check_same_user($pdo,$username);
+$input_err = userinfo_input_charcheck();
+
+$register_err = check_same_user($pdo);
 
 user_register($input_err,$register_err,$pdo);
 

@@ -8,7 +8,7 @@
         </style>
     </head>
     <body>
-       <form method='post'>
+       <form action='ec_userregister.php'method='post'>
            <label for="user_name">ユーザー名</label>
            <input type="text" name="user_name" id='user_name'>
            <label for='passwd'>パスワード</label>
