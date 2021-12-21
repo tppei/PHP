@@ -170,7 +170,7 @@ function get_db_connect() {
 
 // 商品情報追加関数           
 function detail_insert($input_err,$new_name,$new_price,$date,$new_status,$filename,$new_stock,$pdo){
-        
+        $data_array =[];
         // 入力でエラーがない場合
         if(count($input_err) === 0){
             try{
@@ -196,14 +196,26 @@ function detail_insert($input_err,$new_name,$new_price,$date,$new_status,$filena
                 $stmt->execute();
                 
                 
+                // 表作成のためのカラム取得
+                $sql = "SELECT id FROM item_info_table WHERE created_date = (SELECT MAX(created_date) FROM item_info_table)";
+        
+                $stmt=$pdo->query($sql);
+    
+                while($row=$stmt->fetch()){
+                    $data_array[] = $row;
+                }
+                var_dump($data_array);
+                $item_id = $data_array[0]['id'];
+                var_dump($item_id);
                 //   在庫表に行追加
-                $query_stock = "INSERT INTO item_stock_table (stock,created_date,updated_date) VALUES(?,?,?)";
+                $query_stock = "INSERT INTO item_stock_table (stock,created_date,updated_date,item_id) VALUES(?,?,?,?)";
                 $stmt=$pdo->prepare($query_stock);
                 
                 // バインド　以下sqlインジェクション対策
                 $stmt->bindValue(1,$new_stock);
                 $stmt->bindValue(2,$date);
                 $stmt->bindValue(3,$date);
+                $stmt->bindValue(4,$item_id);
                 $stmt->execute();
                 
                 //コミット
@@ -297,7 +309,7 @@ function status_change($pdo){
             
             // ステータス変更クエリ
             $status_query = "UPDATE item_info_table SET status = '$poststatus' WHERE id = $update_drinkid";
-            var_dump($status_query);
+            
             // クエリを実行します
             $stmt=$pdo->query($status_query);
             
@@ -314,12 +326,22 @@ function status_change($pdo){
  
 // 管理者ブラウザに表示する表の作成
  function table_display($pdo){
-    global $data;
+    $data_array =[];
     // 表作成のためのカラム取得
-    $sql = "SELECT item_info_table.id,name,img,price,stock,status FROM item_info_table JOIN item_stock_table ON item_info_table.id = item_stock_table.id";
+    $sql = "SELECT item_info_table.id,name,img,price,stock,status FROM item_info_table JOIN item_stock_table ON item_info_table.id = item_stock_table.item_id";
     $stmt=$pdo->query($sql);
     
     while($row=$stmt->fetch()){
+        $data_array[] = $row;
+    }
+    
+    return $data_array;
+ }
+ 
+ function user_table($pdo,$sql){
+     $data =[];
+     $stmt=$pdo->query($sql);
+     while($row=$stmt->fetch()){
         $data[] = $row;
     }
     

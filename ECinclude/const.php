@@ -9,7 +9,8 @@ $filename ="";
 $input_err =[];
 $err_msg = [];
 $data = [];
-
+$user_name = '';
+$user_id =0;
 
 $regexp_stock = '/^[0-9]+$/';       // 在庫数正規表現
 $regexp_price = '/^[0-9]+$/';       // 値段正規表現

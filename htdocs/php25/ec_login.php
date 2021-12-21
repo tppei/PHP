@@ -12,7 +12,7 @@ session_start();
 // セッション変数からログイン済みか確認
 if (isset($_SESSION['user_id']) === TRUE) {
    // ログイン済みの場合、ホームページへリダイレクト
-   header('Location:ec_userregister.php');
+   header('Location:ec_index.php');
    exit;
 }
 // セッション変数からログインエラーフラグを確認

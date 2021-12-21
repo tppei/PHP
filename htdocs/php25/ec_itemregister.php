@@ -20,7 +20,8 @@ status_change($pdo);
 
 delete_iteminfo($pdo);
 
-table_display($pdo);
+$data = table_display($pdo);
+
 
 
 

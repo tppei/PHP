@@ -30,9 +30,15 @@ $data = get_as_array($pdo,$sql);
 if (isset($data[0]['id'])) {
    // セッション変数にuser_idを保存
    $_SESSION['user_id'] = $data[0]['id'];
-   // ログイン済みユーザ登録ページへリダイレクト
-   header('Location:ec_userregister.php');
-   exit;
+   // 管理者用ページ　管理者のidは14
+   if($data[0]['id'] === 14){
+      header('Location:ec_itemregister.php');
+      exit;
+   }else{
+   // ログイン済み商品一覧ページへリダイレクト
+      header('Location:ec_index.php');
+      exit;
+   }
 } else {
    // セッション変数にログインのエラーフラグを保存
    $_SESSION['login_err_flag'] = TRUE;

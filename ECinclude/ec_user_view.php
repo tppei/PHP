@@ -2,22 +2,32 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>会員登録</title>
-        <style>
-           
-        </style>
+        <title>ユーザー登録</title>
+        <link type="text/css" rel="stylesheet" href="./css/common.css">
     </head>
     <body>
-       <form action='ec_userregister.php'method='post'>
-           <label for="user_name">ユーザー名</label>
-           <input type="text" name="user_name" id='user_name'>
-           <label for='passwd'>パスワード</label>
-           <input type='text' name='passwd' id ='passwd'>
-           <input type="submit" value="■□■□■登録■□■□■">
-       </form>
+        <header>
+            <div class="header-box">
+              <a href="./top.php">
+                <img class="logo" src="./image/logo.png" alt="CodeSHOP">
+              </a>
+              <a href="./cart.php" class="cart"></a>
+            </div>
+        </header>
+        
+        <div class = "content">
+            <div class = 'register'>
+                <form action='ec_userregister.php'method='post'>
+                   <div><label for="user_name">ユーザー名:</label>
+                   <input type="text" name="user_name" id='user_name'></div>
+                   <div><label for='passwd'>パスワード:</label>
+                   <input type='text' name='passwd' id ='passwd'></div>
+                   <div><input type="submit" value="■□■□■登録■□■□■"></div>
+                </form>
+                <div class="login-link"><a href="./ec_login.php">ログインページに移動する</a></div>
+            </div>
        
-   <form action="ec_logout.php" method="post">
-       <input type="submit" value="ログアウト">
-   </form>
+          
+        </div>
     </body>
 </html>

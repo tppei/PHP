@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>ECサイト商品登録</title>
+        <link type="text/css" rel="stylesheet" href="./css/common.css">
         <style>
             section{
                 margin-bottom: 20px;
@@ -43,10 +44,14 @@
     </head>
     <body>
         <h1>ECサイト販売者管理ツール</h1>
+        <div>
+            <a href="./ec_logout.php">ログアウト</a>
+            <a href="./ec_admin_user.php">ユーザ管理ページ</a>
+        </div>
         <section>
             <h2>新規商品追加</h2>
             <!--enctype属性は画像アップロードに必要-->
-            <form method="post" enctype ="multipart/form-data" action = "../php25/ec_tool.php">
+            <form method="post" enctype ="multipart/form-data" action = "ec_itemregister.php">
                <div>
                    <label>
                        名前：
