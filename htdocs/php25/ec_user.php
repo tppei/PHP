@@ -10,6 +10,7 @@ require_once '../../ECinclude/model.php';
 // セッション開始
 session_start();
 // セッション変数からuser_id取得
+
 if (isset($_SESSION['id']) === TRUE) {
    $user_id = $_SESSION['id'];
 } else {

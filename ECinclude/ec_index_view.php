@@ -8,11 +8,11 @@
     <body>
         <header>
             <div class="header-box">
-              <a href="./top.php">
+              <a href="./ec_login.php">
                 <img class="logo" src="./image/logo.png" alt="CodeSHOP">
               </a>
               <a class="nemu" href="./ec_logout.php">ログアウト</a>
-              <a href="./cart.php" class="cart"></a>
+              <a href="./ec_cart.php" class="cart"></a>
               <p class="nemu">ユーザー名：<?php print $user_name?></p>
             </div>
         </header>
@@ -31,7 +31,7 @@
                 ?>
                 <li>
                     <div class="item">
-                        <form action="cart.php" method="post">
+                        <form action="ec_cart.php" method="post">
                             <!--商品画像-->
                             <?php print '<img class = "item-img" src= "./image/'.$go['img'].'">'?>
                             <div class = "item-info">

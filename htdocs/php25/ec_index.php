@@ -10,7 +10,7 @@ session_start();
 if (isset($_SESSION['user_id']) === TRUE) {
    $user_id = $_SESSION['user_id'];
 }
-
+var_dump($user_id);
 // データベース接続
 $pdo = get_db_connect();
 
