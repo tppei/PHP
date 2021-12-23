@@ -419,6 +419,23 @@ function delete_cartiteminfo($pdo){
         }
     
 }
+
+function complete_shopping($pdo,$array){
+    
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        if(!empty($array)){
+        // トランザクション開始
+            $pdo->beginTransaction();
+            $sql = "DELETE FROM cart_table";
+            $stmt=$pdo->query($sql);
+             //コミット
+            $pdo->commit();
+        }else{
+            print '商品がありません';
+        }
+    }
+    
+}
 // // カートの商品情報取得関数
 // function cart_iteminfo($pdo){
 //     // トランザクション開始
@@ -593,40 +610,47 @@ function cart_adding ($pdo,$item_id,$user_id){
     $sql = '';
     $add_sql = "";
     
+    try{
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        
+        $sql = "SELECT item_id FROM cart_table WHERE item_id = $item_id";
+        
     
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    
-    $sql = "SELECT item_id FROM cart_table WHERE item_id = $item_id";
-    
-    if(!get_as_array($pdo,$sql)){
-    
-        if(isset($item_id)){
-            $query = "INSERT INTO cart_table(user_id,item_id,amount,created_date,updated_date) VALUES(?,?,?,?,?)";
-            $stmt=$pdo->prepare($query);
-            
-            // バインド　以下sqlインジェクション対策
-            $stmt->bindValue(1,$user_id);
-            $stmt->bindValue(2,$item_id);
-            $stmt->bindValue(3,1);
-            $stmt->bindValue(4,$date);
-            $stmt->bindValue(5,$date);
-            $stmt->execute();
+        if(!empty(get_as_array($pdo,$sql))){
+        
+            if(isset($item_id)){
+                $query = "INSERT INTO cart_table(user_id,item_id,amount,created_date,updated_date) VALUES(?,?,?,?,?)";
+                $stmt=$pdo->prepare($query);
+                
+                // バインド　以下sqlインジェクション対策
+                $stmt->bindValue(1,$user_id);
+                $stmt->bindValue(2,$item_id);
+                $stmt->bindValue(3,1);
+                $stmt->bindValue(4,$date);
+                $stmt->bindValue(5,$date);
+                $stmt->execute();
             }
-    }else{
-             $amount_select_sql = "";
-             $amount_select_sql = "SELECT amount FROM cart_table WHERE item_id = $item_id";
-             $amount = 0;//cartから取り出した量
-             $data = "";
-             $data = get_as_array($pdo,$amount_select_sql);
-             
-             $amount = $data[1]['amount'];//cartから取り出した量
-             $amount = ++$amount;
+            
+        }else{
+                 $amount_select_sql = "";
+                 $amount_select_sql = "SELECT amount FROM cart_table WHERE item_id = $item_id";
+                 $amount = 0;//cartから取り出した量
+                 $data = "";
+                 $data = get_as_array($pdo,$amount_select_sql);
                  
-             $add_sql = "UPDATE cart_table SET amount = $amount WHERE item_id = $item_id";
-             $stmt=$pdo->query($add_sql);
+                 $amount = $data[0]['amount'];//cartから取り出した量
+                 $amount = ++$amount;
+                     
+                 $add_sql = "UPDATE cart_table SET amount = $amount WHERE item_id = $item_id";
+                 $stmt=$pdo->query($add_sql);
+        }
+    }catch(PDOException $e){    
+        if(isset($pdo)===true && $pdo->inTransaction()===true){
+            //ロールバックする
+            $pdo->rollBack();
+        }
     }
-    
 }
 
 function cart_amount_change($pdo){

@@ -13,7 +13,7 @@
       </a>
       <a class="nemu" href="./ec_logout.php">ログアウト</a>
       <a href="./ec_cart.php" class="cart"></a>
-      <p class="nemu">ユーザー名：tktktktk</p>
+      <p class="nemu">ユーザー名:<?php print $user_name; ?></p>
     </div>
   </header>
   <div class="content">
@@ -26,9 +26,10 @@
     <ul class="cart-list">
     　<?php
       if(!empty($data)){
-      
+         
         foreach($data as $go){
-      ?>
+            $sum_price += $go['price'] * $go['amount'];
+          ?>
       <li>
         <div class="cart-item">
           <?php print '<img class = "item-img" src= "./image/'.$go['img'].'">'?>
@@ -40,9 +41,7 @@
           </form>
           <span class="cart-item-price"><?php print '￥' . htmlspecialchars($go['price'],ENT_QUOTES,'UTF-8')?></span>
           <form class="form_select_amount" id="form_select_amount<?php print htmlspecialchars($go['item_id'],ENT_QUOTES,'UTF-8')?>" action="./ec_cart.php" method="post">
-            <input type="text" class="cart-item-num2" min="0" name="select_amount" value="
-            <?php print htmlspecialchars($go['amount'],ENT_QUOTES,'UTF-8')?>
-            ">個&nbsp;<input type="submit" value="変更する">
+            <input type="text" class="cart-item-num2" min="0" name="select_amount" value="<?php print htmlspecialchars($go['amount'],ENT_QUOTES,'UTF-8')?>">個&nbsp;<input type="submit" value="変更する">
             <input type="hidden" name="item_id" value="<?php print htmlspecialchars($go['item_id'],ENT_QUOTES,'UTF-8')?>">
             <input type="hidden" name="sql_kind" value="change_cart">
           </form>
@@ -54,10 +53,10 @@
     </ul>
     <div class="buy-sum-box">
       <span class="buy-sum-title">合計</span>
-      <span class="buy-sum-price"><?php print "￥" .;?></span>
+      <span class="buy-sum-price"><?php print "￥" . $sum_price;?></span>
     </div>
     <div>
-      <form method="post">
+      <form method="post" action = "./ec_finish.php">
         <input class="buy-btn" type="submit" value="購入する">
       </form>
     </div>
