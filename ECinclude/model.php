@@ -130,8 +130,6 @@ function input_charcheck($subject){
     }
 }
 
-
-               
 // 画像ファイルエラー関数
 function file_check(){
     global $input_err;
@@ -209,8 +207,6 @@ function get_db_connect() {
     return $data;
  }
  
-
-
 // 以下ec_itemtegisterで使用する関数
 // 商品情報追加関数           
 function detail_insert($pdo,$input_err){
@@ -297,11 +293,7 @@ function detail_insert($pdo,$input_err){
             }
         }
 }
-           
 
-
-
- 
 //  在庫数変更関数
 function stock_change($pdo,$input_err){
     global $date;
@@ -373,8 +365,6 @@ function status_change($pdo){
     }
 }
  
-
-
 // 登録商品削除関数
 function delete_iteminfo($pdo){
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -392,7 +382,6 @@ function delete_iteminfo($pdo){
     }
     
 }
-
 
 // 以下ec_userregister内で使用する関数
 // 登録するユーザー名が既存かどうか調べる関数

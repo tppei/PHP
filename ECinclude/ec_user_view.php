@@ -11,7 +11,6 @@
               <a href="./ec_login.php">
                 <img class="logo" src="./image/logo.png" alt="CodeSHOP">
               </a>
-              <a href="./cart.php" class="cart"></a>
             </div>
         </header>
         
