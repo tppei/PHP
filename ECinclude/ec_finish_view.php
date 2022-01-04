@@ -31,7 +31,7 @@
         ?>
         <li>
             <div class="cart-item">
-              <?php print '<img class = "item-img" src= "./image/'.$go['img'].'">'?>
+              <?php print '<img class = "cart-item-img" src= "./image/'.$go['img'].'">'?>
               <span class="cart-item-name"><?php print htmlspecialchars($go['name'],ENT_QUOTES,'UTF-8')?></span>
               <span class="cart-item-price"><?php print '￥' . htmlspecialchars($go['price'],ENT_QUOTES,'UTF-8')?></span>
               <span class="finish-item-price"><?php print htmlspecialchars($go['amount'],ENT_QUOTES,'UTF-8')?></span>

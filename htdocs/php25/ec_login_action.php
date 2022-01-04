@@ -1,10 +1,8 @@
 <?php
 /*
 *  ログイン処理
-*
-*  セッションの仕組み理解を優先しているため、一部処理はModelへ分離していません
-*  また処理はセッション関連の最低限のみ行っており、本来必要な処理も省略しています
 */
+
 require_once '../../ECinclude/const.php';
 require_once '../../ECinclude/model.php';
 // リクエストメソッド確認
@@ -31,7 +29,7 @@ if (isset($data[0]['id'])) {
    // セッション変数にuser_idを保存
    $_SESSION['user_id'] = $data[0]['id'];
    // 管理者用ページ　管理者のidは14
-   if($data[0]['id'] === 14){
+   if( $_SESSION['user_id'] === 14){
       header('Location:ec_itemregister.php');
       exit;
    }else{

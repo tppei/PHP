@@ -1,12 +1,10 @@
 <?php
 /*
 *  ログアウト処理
-*
-*  セッションの仕組み理解を優先しているため、一部処理はModelへ分離していません
-*  また処理はセッション関連の最低限のみ行っており、本来必要な処理も省略しています
 */
 require_once '../../ECinclude/const.php';
 require_once '../../ECinclude/model.php';
+
 // セッション開始
 session_start();
 // セッション名取得 ※デフォルトはPHPSESSID

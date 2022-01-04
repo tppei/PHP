@@ -11,7 +11,7 @@
       <a href="./ec_login.php">
         <img class="logo" src="./image/logo.png" alt="CodeSHOP">
       </a>
-      <a href="./cart.php" class="cart"></a>
+      <!--<a href="./ec_cart.php" class="cart"></a>-->
     </div>
   </header>
    <div class="content">
@@ -21,14 +21,16 @@
          <div><input type="password" id="passwd" name="passwd" placeholder = "パスワード" value=""></div>
          <div><input type="submit" value="ログイン"></div>
       </form>
+      <?php if ($login_err_flag === TRUE) { ?>
+       <p class = "red">メールアドレス又はパスワードが違います</p>
+      <?php } ?>
       <div class="account-create">
         <a href="./ec_userregister.php">ユーザーの新規作成</a>
       </div>
     </div>
-   </div>
-<?php if ($login_err_flag === TRUE) { ?>
-   <p>メールアドレス又はパスワードが違います</p>
-<?php } ?>
+   
+
+</div>
 </body>
 </html>
 

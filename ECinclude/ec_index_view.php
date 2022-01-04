@@ -41,14 +41,14 @@
                                 <span class ='item-price'><?php print '￥' . htmlspecialchars($go['price'],ENT_QUOTES,'UTF-8')?></span>
                             </div>
                             <?php
-                            if($go['stock'] !== '0'){
+                            // 在庫の確認
+                            if($go['stock'] !== 0){
                             ?>
-                            <!--在庫があればラジオボタン表示-->
-                                <input type ='hidden' name='item_id' value='<?php print htmlspecialchars($go['id'],ENT_QUOTES,'UTF-8')?>'>
+                                <input type ='hidden' name='additem_id' value='<?php print htmlspecialchars($go['id'],ENT_QUOTES,'UTF-8')?>'>
                                 <input class = "cart-btn" type='submit' value="カートに追加">
                             <?php
                             }else{ 
-                                // なければ売り切れを表示
+                                // 在庫なければ売り切れを表示
                                 print "<span class='red'>売り切れ</span>";
                             }
                             ?>

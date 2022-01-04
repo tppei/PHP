@@ -32,7 +32,7 @@
           ?>
       <li>
         <div class="cart-item">
-          <?php print '<img class = "item-img" src= "./image/'.$go['img'].'">'?>
+          <?php print '<img class = "cart-item-img" src= "./image/'.$go['img'].'">'?>
           <span class="cart-item-name"><?php print htmlspecialchars($go['name'],ENT_QUOTES,'UTF-8')?></span>
           <form class="cart-item-del" action="./ec_cart.php" method="post">
             <input type="submit" value="削除">
