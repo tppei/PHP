@@ -22,7 +22,7 @@
       ?>
       <tr>
           <td><?php print htmlspecialchars($go['user_name'],ENT_QUOTES,'UTF-8')?></td>
-          <td><?php print htmlspecialchars($go['password'],ENT_QUOTES,'UTF-8')?></td>
+          <td><?php print htmlspecialchars($go['created_date'],ENT_QUOTES,'UTF-8')?></td>
       </tr> 
       <?php } ?>
   </table>

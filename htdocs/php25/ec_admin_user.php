@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id']) === TRUE) {
 
 // データベース接続
 $pdo = get_db_connect();
-$sql = "SELECT user_name,password FROM user_info_table";
+$sql = "SELECT user_name,created_date FROM user_info_table";
 $data = user_table($pdo,$sql);
 
 include_once '../../ECinclude/ec_admin_user_view.php';
