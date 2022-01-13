@@ -31,7 +31,9 @@
                 ?>
                 <li>
                     <div class="item">
-                        <form action="ec_cart.php" method="post">
+                        <!--1/13追加-->
+                        <iframe id="iframe" name="iframe" style="display: none;"></iframe>
+                        <form action="ec_cart.php" method="post" target="iframe">
                             <!--商品画像-->
                             <?php print '<img class = "item-img" src= "./image/'.$go['img'].'">'?>
                             <div class = "item-info">

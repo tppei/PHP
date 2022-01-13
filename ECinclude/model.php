@@ -159,11 +159,10 @@ function err_display($input_err){
 
 // db接続関数
 function get_db_connect() {
-            $username = 'codecamp49497';
-            $passwd = 'codecamp49497';
+            global $dsn;
         try{
-            // pdoによるMYSQLへの接続
-            $pdo = new PDO('mysql:host=localhost;dbname=codecamp49497;charset=utf8;',$username,$passwd);
+            // pdoによるMYSQLへの接続　1/13修正
+            $pdo = new PDO($dsn,DB_USER,DB_PASSWD);
             //例外をスロ-
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
@@ -286,6 +285,8 @@ function detail_insert($pdo,$input_err){
                         $stmt->bindValue(4,$item_id);
                         $stmt->execute();
                         
+                        print "商品追加完了";    //1/13　追加
+                        
                 }else{
                 //   入力エラーある場合エラー内容を表示
                        err_display($input_err);
@@ -374,6 +375,10 @@ function delete_iteminfo($pdo){
             
             // 登録商品テーブル
             $sql = "DELETE FROM item_info_table WHERE id= $id";
+            $stmt=$pdo->query($sql);
+            
+            // 在庫数テーブル
+            $sql = "DELETE FROM item_stock_table WHERE item_id = $id";
             $stmt=$pdo->query($sql);
             
             print "削除完了";
@@ -482,11 +487,12 @@ function cart_adding ($pdo,$item_id,$user_id){
     $stock = 0;
     $data = "";
     if(isset($_POST['additem_id'])){
+       
         // カートに追加する商品がすでにカート内にあるか確かめるクエリ
         $sql = "SELECT item_id FROM cart_table WHERE item_id = $item_id";
             // 上のクエリで取得できなかった場合
             if(empty(get_as_array($pdo,$sql))){
-                   
+                    
                     // カートテーブルに商品情報追加
                     $query = "INSERT INTO cart_table(user_id,item_id,amount,created_date,updated_date) VALUES(?,?,?,?,?)";
                     
@@ -499,11 +505,12 @@ function cart_adding ($pdo,$item_id,$user_id){
                     $stmt->bindValue(4,$date);
                     $stmt->bindValue(5,$date);
                     $stmt->execute();
-                    print 'カートにいれました';
+                    
+                    
             
             // 上のクエリで取得できた場合
             }else{ 
-                 
+                    
                     
                     //  カートテーブルからカート内の個数を取得
                      $amount_select_sql = "SELECT amount FROM cart_table WHERE item_id = $item_id";
@@ -525,7 +532,7 @@ function cart_adding ($pdo,$item_id,$user_id){
                          $update_date_query = "UPDATE cart_table SET updated_date = '$date' WHERE item_id = $item_id";
                          $stmt=$pdo->query($update_date_query);
                          
-                         print 'カートに入れました';
+                         
                      }else{
                          print "在庫がありません";
                      }
